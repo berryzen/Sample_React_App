@@ -1,5 +1,5 @@
     
-# vincit-pre-assignment
+# pre-assignment
 
 ..development ongoing..
 
