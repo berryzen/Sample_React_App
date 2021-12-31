@@ -1,6 +1,5 @@
 import './App.css'
 import { useState } from "react"
-import Header from "./components/Header"
 import ShowHighestVolume from "./components/ShowHighestVolume"
 import ShowLongestDownTrend from "./components/ShowLongestDownTrend"
 import ShowMaxProfitWindow from "./components/ShowMaxProfitWindow"

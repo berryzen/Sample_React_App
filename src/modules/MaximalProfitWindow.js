@@ -4,10 +4,7 @@ export function maximalprofitwindow(dataset) {
     var datalenght = Object.keys(dataset["total_volumes"]).length;
     var day_highest_price = null
     var highest_price = 0
-    var lowest_price = 1000000
-    var global_lowest_price = 1000000
     var global_day_lowest_price = null
-    var global_highest_price = 0
     var global_day_highest_price = null
     var biggest_profit = 0
     var lowest_price = dataset["prices"][0][1]
@@ -28,8 +25,6 @@ export function maximalprofitwindow(dataset) {
                 }
                 if (biggest_profit < (highest_price-lowest_price)){
                 biggest_profit = highest_price-lowest_price
-                global_lowest_price = lowest_price
-                global_highest_price = highest_price
                 global_day_lowest_price = day_lowest_price
                 global_day_highest_price = day_highest_price
 
@@ -42,7 +37,7 @@ export function maximalprofitwindow(dataset) {
     const global_day_lowest_price_converted = new Date(global_day_lowest_price).toLocaleString()
     const global_day_highest_price_converted = new Date(global_day_highest_price).toLocaleString()
 
-    if (biggest_profit == 0){
+    if (biggest_profit === 0){
         trade_or_not = false
     }
 
