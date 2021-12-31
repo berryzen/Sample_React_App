@@ -1,3 +1,4 @@
+//Convert hourly to daily data
 export function hourstodays(dataset) {
   var i=0
   var d_i = 0

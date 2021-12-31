@@ -1,7 +1,6 @@
 import './Component.css'
 
-function ShowMaxProfitWindow(props) {
-    
+function ShowMaxProfitWindow(props) {    
     return (
         <div>
             <h1 className='title'>Maximal profit window </h1>

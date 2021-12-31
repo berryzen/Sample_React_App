@@ -1,14 +1,5 @@
-%Siisti koodia
-%Tee siistimpi ulkoasu, kun musta tausta pois
-%poista kommentteja
-kokeile siirtää komponentteihin juttuja
+#Vincit pre-assignment
 
-vika kerta debug juttu 
-state default valueiden vaikutus
-# pre-assignment
+This is Reactjs app 
 
-..development ongoing..
-
-*Käynnistysohjeet
-
-https://berryzen.github.io/pre_assigment/index.html
+Hosted solution: https://berryzen.github.io/pre_assigment/index.html

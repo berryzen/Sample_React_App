@@ -1,4 +1,4 @@
-
+//Compute longest streak of negative values
 export function longestdowntrend(dataset) {
   var downtrend = 0
   var downtrend_record = 0

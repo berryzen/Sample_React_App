@@ -2,27 +2,30 @@ import React from 'react'
 import { useState } from "react"
 
 function InputForm(props) {
-    const [startDate, setStartDate] = useState(null);  
-    const [endDate, setEndDate] = useState(null);  
-    
+
+    const [startDate, setStartDate] = useState("");  
+    const [endDate, setEndDate] = useState("");    
     return (
-        <form  className='add-form'  onSubmit={() => props.fetchData(startDate, endDate)} >
-        <div  className='form-control'>
-          <label>Start date: </label>
-            <input type='date' 
-              onChange={(e) => setStartDate(e.target.value)}
-              />
-        </div>
-        <div className='form-control' >
-          <label>End date: </label>
-          <input type='date' 
-            onChange={(e) => setEndDate(e.target.value)}
-            />
-        </div>
-          <input type='submit' value='Load data' className='btn btn-block'  />
-          
-      </form>
-  
+        <header className='header'>
+            <h1 className='title'> Load market data </h1>
+           
+            <form className='add-form' >
+                <div className='form-control'>
+                    <label>Start date: </label>
+                    <input type='date' 
+                    onChange={(e) => setStartDate(e.target.value)}/>
+                </div>
+                <div className='form-control'>
+                    <label>End date: </label>
+                    <input type='date' 
+                    onChange={(e) => setEndDate(e.target.value)}/>
+                </div>
+        
+            </form>
+    
+            <button className='btn btn-block' onClick={()=> props.func(startDate, endDate)}>  Load data </button>
+        </header>  
+        
     )
 }
 

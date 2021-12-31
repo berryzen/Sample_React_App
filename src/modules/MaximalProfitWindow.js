@@ -1,6 +1,4 @@
-//Search strategy:
-//outer loop searches highest price beginning from end
-//inner loop scans lowest price after every hit to highest price from outer loop
+//Search begin and end date for biggest for biggest profit. Return also advice to trade or not
 export function maximalprofitwindow(dataset) {    
     
     var datalenght = Object.keys(dataset["total_volumes"]).length;
