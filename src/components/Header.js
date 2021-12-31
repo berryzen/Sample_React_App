@@ -3,7 +3,7 @@ import React from 'react'
 const Header = () => {
     return (
         <header className='header'>
-            <h1 style={{ color: 'steelblue', backgroundColor:'black'  }}> Load market data </h1>
+            <h1 style={{ color: '#D4F1F4', backgroundColor:'#05445E'  }}> Load market data </h1>
 
         </header>
     )

@@ -14,7 +14,9 @@ export function maximalprofitwindow(dataset) {
     var biggest_profit = 0
     var lowest_price = dataset["prices"][0][1]
     var day_lowest_price = dataset["prices"][0][0]
-
+    var trade_or_not = true
+    
+    
     for (var i = datalenght-1; i >= 0; i--) {        
         if (dataset["prices"][i][1] > highest_price  ){
             highest_price = dataset["prices"][i][1]
@@ -22,27 +24,29 @@ export function maximalprofitwindow(dataset) {
 
             for (var z = 0; z < i; z++){
                 if (dataset["prices"][z][1] < lowest_price  ){ 
-                    console.log("x->")
                     lowest_price = dataset["prices"][z][1]
                     day_lowest_price = dataset["prices"][z][0]
 
-            }
-            if (biggest_profit < (highest_price-lowest_price)){
+                }
+                if (biggest_profit < (highest_price-lowest_price)){
                 biggest_profit = highest_price-lowest_price
-                console.log(biggest_profit)
                 global_lowest_price = lowest_price
                 global_highest_price = highest_price
                 global_day_lowest_price = day_lowest_price
                 global_day_highest_price = day_highest_price
-                console.log(global_day_lowest_price)
-                console.log(global_lowest_price)
-            }   
-            lowest_price = dataset["prices"][0][1]
-            day_lowest_price = dataset["prices"][0][0]
+
+                }   
+                lowest_price = dataset["prices"][0][1]
+                day_lowest_price = dataset["prices"][0][0]
+            }
         }
     }
-}
-const global_day_lowest_price_converted = new Date(global_day_lowest_price).toLocaleString()
-const global_day_highest_price_converted = new Date(global_day_highest_price).toLocaleString()
-return [global_day_lowest_price_converted, global_day_highest_price_converted]
+    const global_day_lowest_price_converted = new Date(global_day_lowest_price).toLocaleString()
+    const global_day_highest_price_converted = new Date(global_day_highest_price).toLocaleString()
+
+    if (biggest_profit == 0){
+        trade_or_not = false
+    }
+
+    return [global_day_lowest_price_converted, global_day_highest_price_converted, trade_or_not]
 }

@@ -1,9 +1,11 @@
 import React from 'react'
+import './Component.css'
 
-function ShowLongestDownTrend() {
+function ShowLongestDownTrend(props) {
     return (
         <div>
-            <h1 style={{ color: 'steelblue', backgroundColor:'black'  }}>Longest downtrend </h1>
+            <h1 className='title'>Longest downtrend </h1>
+            <h3 className='outputdata'>Longest Downtrend: {props.downTrendRecord} days </h3>
         </div>
     )
 }
