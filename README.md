@@ -1,5 +1,6 @@
-#Sample reactjs app
-
+# Sample reactjs app
+ 
+//Not workin yet
 Here is hosted solution: https://berryzen.github.io/pre_assigment/index.html
 
 This sample program makes it possible load bitcoin dataset from Coingecko API from certain time range.
