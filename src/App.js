@@ -22,6 +22,7 @@ function App() {
 
     const startunixtime = ((Date.parse(startDate))/1000)
     const endunixtime = ((Date.parse(endDate))/1000)+3600 
+    // Tee tähä error handling ja sitten myös input validation
     const res = await fetch("https://api.coingecko.com/api/v3/coins/bitcoin/market_chart/range?vs_currency=eur&from="+startunixtime+"&to="+endunixtime)
     var dataset = await res.json()     
 

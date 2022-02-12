@@ -1,6 +1,6 @@
 {
-  "name": "pre-assignment",
-  "homepage": "https://berryzen.github.io/pre_assigment",
+  "name": "load_and_refine_data",
+  "homepage": "https://berryzen.github.io/load_and_refine_data",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

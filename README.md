@@ -1,4 +1,4 @@
-# Sample reactjs app
+# Load and refine data
  
 //Not workin yet
 Here is hosted solution: https://berryzen.github.io/pre_assigment/index.html
@@ -8,7 +8,7 @@ Then refine some knowledge from dataset, like highest volume, longest downtrend 
 
 
 
-#TODO
-#Virheenkorjaus
-#Dokumentoinnin parantaminen 
-#Olio-ohjelmointi
+### TODO
+- Virheenkorjaus
+- Dokumentoinnin parantaminen 
+- Olio-ohjelmointi
