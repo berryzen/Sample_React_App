@@ -3,12 +3,8 @@ import { useState } from "react"
 import ShowHighestVolume from "./components/ShowHighestVolume"
 import ShowLongestDownTrend from "./components/ShowLongestDownTrend"
 import ShowMaxProfitWindow from "./components/ShowMaxProfitWindow"
-import { biggestvolume } from "./modules/BiggestVolume"
-import { hourstodays } from './modules/HoursToDays'
-import { longestdowntrend } from './modules/LongestDownTrend'
-import { maximalprofitwindow } from './modules/MaximalProfitWindow'
 import InputForm from './components/InputForm'
-
+import { maximalprofitwindow, longestdowntrend, hourstodays, biggestvolume } from './modules/DataRefineing'
 
 
 function App() {
@@ -17,12 +13,11 @@ function App() {
   const [downTrendRecord, setDownTrendRecord] = useState(0);
   const [maximalProfit, setMaximalProfit] = useState(false);
 
-
   async function fetchData1(startDate,endDate,e) {
 
     const startunixtime = ((Date.parse(startDate))/1000)
     const endunixtime = ((Date.parse(endDate))/1000)+3600 
-    // Tee tähä error handling ja sitten myös input validation
+    // Tee tähä error handling 
     const res = await fetch("https://api.coingecko.com/api/v3/coins/bitcoin/market_chart/range?vs_currency=eur&from="+startunixtime+"&to="+endunixtime)
     var dataset = await res.json()     
 

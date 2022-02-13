@@ -1,6 +1,10 @@
 import React from 'react'
 import { useState } from "react"
 
+
+//TODO
+//Input validation
+//Only allow Date range between current date and day smaller than this day, that is not smaller first day of dataset
 function InputForm(props) {
 
     const [startDate, setStartDate] = useState("");  
